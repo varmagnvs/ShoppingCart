@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shopping Cart</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_manage_list">ManageListActivity</string>
+    <string name="childName">Child Name</string>
+    <string name="childSubName">child Sub Item Name</string>
+    <string name="parentName">Parent Item Name</string>
+    <string name="parentSubItem">Parent Sub Item Name</string>
+
+</resources>

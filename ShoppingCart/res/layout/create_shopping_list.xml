@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@id/layout"
+    tools:context=".CreateListActivity" >
+
+    <TextView
+        android:id="@+id/addItemTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newItemTextV"
+        android:layout_alignRight="@+id/newItemTextV"
+        android:background="#000000"
+        android:text="Add New Item"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/newItemTextV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addItemTextView"
+        android:layout_toLeftOf="@+id/addNewItemButton"
+        android:ems="10"
+        android:hint="Enter item" >
+
+        <requestFocus />
+    </EditText>
+
+    <ListView
+        android:id="@+id/ItemslistView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/saveListItemsbutton"
+        android:layout_below="@+id/newItemTextV"
+        android:background="@color/light_green"
+        android:choiceMode="multipleChoice" >
+       
+            
+
+    </ListView>
+
+    <Button
+        android:id="@+id/addNewItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ItemslistView"
+        android:layout_alignRight="@+id/ItemslistView"
+        android:layout_alignTop="@+id/addItemTextView"
+        android:background="@drawable/button_shape"
+        android:onClick="addNewItem"
+        android:text="Add Item"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+ <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ItemslistView"
+        android:layout_alignTop="@+id/homeButton"
+        android:background="@drawable/home_button_icon"
+        android:onClick="mainWindow"
+        android:visibility="visible" />    <Button
+        android:id="@+id/saveListItemsbutton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ItemslistView"
+        android:background="@drawable/button_shape"
+        android:height="55dp"
+        android:onClick="saveList"
+        android:text="Select and Save List"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:width="120dp" />
+
+    <Button
+        android:id="@+id/removeItemButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ItemslistView"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_shape"
+        android:height="55dp"
+        android:onClick="removeItem"
+        android:text="Remove Items"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:width="120dp" />
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shoppingcart"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/shopping_cart_icon"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.shoppingcart.MainActivity"
+            android:label="@string/app_name"
+			android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.CreateStoreActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.shoppingcart.MainActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.shoppingcart.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.ListOfStoresActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.shoppingcart.CreateStoreActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.shoppingcart.CreateStoreActivity" />
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.ManageStoreActivity"
+            android:label="@string/app_name" 
+            android:parentActivityName="com.example.shoppingcart.ListOfStoresActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.shoppingcart.ListOfStoresActivity" />
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.AddStoreItemActivity"
+            android:label="@string/app_name" 
+            android:parentActivityName="com.example.shoppingcart.ManageStoreActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.com.example.shoppingcart.ManageStoreActivity" />
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.ManageStoreItemActivity"
+            android:label="@string/app_name"  
+            android:parentActivityName="com.example.shoppingcart.ManageStoreActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.com.example.shoppingcart.ManageStoreActivity" />
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.ManageShoppingListActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.example.shoppingcart.MainActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.com.example.shoppingcart.MainActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.CreateShoppingListActivity"
+            android:label="@string/app_name" 
+            android:parentActivityName="com.example.shoppingcart.MainActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.com.example.shoppingcart.MainActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.SortedItemsActivity"
+            android:label="@string/app_name" 
+            android:parentActivityName="com.example.shoppingcart.ManageShoppingListActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.com.example.shoppingcart.ManageShoppingListActivity">
+            </meta-data>
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.UpdateStoreItemActivity"
+            android:label="@string/app_name" 
+            android:parentActivityName="com.example.shoppingcart.ManageStoreActivity">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.com.example.shoppingcart.ManageStoreActivity">
+            </meta-data>            
+        </activity>
+        <activity
+            android:name="com.example.shoppingcart.ManageShoppingListItemsActivity"
+            android:label="@string/app_name"
+			android:screenOrientation="portrait"
+			android:parentActivityName="com.example.shoppingcart.MainActivity">
+			<meta-data
+			android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.com.example.shoppingcart.MainActivity">
+            </meta-data> 
+        </activity>
+    </application>
+
+</manifest>
